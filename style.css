@@ -20,9 +20,6 @@ body {
 #container div {
     box-sizing: border-box;
     border: 1px solid black;
-    height: calc(100% / 16);/*rows*/
-    flex: 1 0 calc(100% / 16); /*columns*/
-
 } 
 
 div:hover{
