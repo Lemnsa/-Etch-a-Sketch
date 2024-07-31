@@ -10,3 +10,10 @@ for(let i = 0; i < 256; i++) {
 
         appendDiv(divContainers);
 }
+
+let colorDiv = (div) => {
+    const colors = ["green","yellow","red","blue"];
+    let randomIndex = Math.floor(Math.random() * colors.length);
+    let coloredDiv = div.setAttribute("style", `background-color: ${colors[randomIndex]}`);
+    return coloredDiv;
+}
