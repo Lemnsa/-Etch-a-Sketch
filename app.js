@@ -11,9 +11,17 @@ for(let i = 0; i < 256; i++) {
         appendDiv(divContainers);
 }
 
-let colorDiv = (div) => {
+function getRandomColor() {
     const colors = ["green","yellow","red","blue"];
     let randomIndex = Math.floor(Math.random() * colors.length);
-    let coloredDiv = div.setAttribute("style", `background-color: ${colors[randomIndex]}`);
-    return coloredDiv;
+    return colors[randomIndex];
 }
+
+
+
+divContainers.addEventListener("mouseout", (e) => {
+    const activeDiv = e.target;
+    if (activeDiv.id !== 'container') {
+        activeDiv.style.backgroundColor = `${getRandomColor()}`;
+    }
+}); 
