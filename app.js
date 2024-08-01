@@ -1,28 +1,30 @@
 const divContainers = document.getElementById("container");
 
-const numberOfDivsByUser = Number(prompt("Enter the number Of Squares"));
+const button = document.querySelector("button");
+
+button.addEventListener("click", function () {
+    divContainers.innerText = '';
+    let numberOfDivsByUser = Number(prompt("Enter the number Of Squares"));
 
 if (numberOfDivsByUser > 100) {
     alert("Enter a Number not greater than 100!");
 }
 else{
-    const numberOfRowsAndColumns = numberOfDivsByUser;
-    const rounded = Math.ceil(numberOfRowsAndColumns);
-
-    console.log(rounded);
     let appendDiv = (container) => {
     const div = document.createElement("div");
-    div.setAttribute("style", `flex: 1 0 calc(100% / ${rounded}); height: calc(100% / ${rounded}`);
+    div.setAttribute("style", `flex: 1 0 calc(100% / ${numberOfDivsByUser}); height: calc(100% / ${numberOfDivsByUser}`);
     return container.appendChild(div);
 }
 
-const numberOfSquares = numberOfDivsByUser * numberOfDivsByUser;
+let numberOfSquares = numberOfDivsByUser * numberOfDivsByUser;
 
     for(let i = 0; i < numberOfSquares; i++) {
 
         appendDiv(divContainers);
     }
 }
+
+})
 
 function getRandomColor() {
     const colors = ["green","yellow","red","blue"];
