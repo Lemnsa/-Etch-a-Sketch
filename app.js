@@ -6,7 +6,7 @@ if (numberOfDivsByUser > 100) {
     alert("Enter a Number not greater than 100!");
 }
 else{
-    const numberOfRowsAndColumns = Math.sqrt(numberOfDivsByUser);
+    const numberOfRowsAndColumns = numberOfDivsByUser;
     const rounded = Math.ceil(numberOfRowsAndColumns);
 
     console.log(rounded);
@@ -16,7 +16,9 @@ else{
     return container.appendChild(div);
 }
 
-    for(let i = 0; i < numberOfDivsByUser; i++) {
+const numberOfSquares = numberOfDivsByUser * numberOfDivsByUser;
+
+    for(let i = 0; i < numberOfSquares; i++) {
 
         appendDiv(divContainers);
     }
