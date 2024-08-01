@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2em;
     height: 100vh;
     background-color: #f0f0f0;
 }
